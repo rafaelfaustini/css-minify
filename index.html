@@ -1,0 +1,46 @@
+
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body class="">
+        <style>
+            [v-cloak] {
+                display: none;
+            }
+        </style>
+        <div id="app" v-cloak>
+
+            <div class="container my-4">
+                <p class="text-center display-4" style="font-size:2rem">Minify my HTML/CSS</p>
+                <div class="row row-cols-2" style="margin-top:10vh">
+                    <div class="col col-lg-5">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Input HTML/CSS</label>
+                            <textarea class="form-control" v-model="inputCSS" id="inputTextArea" 
+                            rows="20" style="height:50vh"></textarea>
+                        </div>
+                    </div>
+                    <div class="col col-lg-5">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Output HTML/CSS</label>
+                            <textarea class="form-control" v-model="outputCSS" id="outputTextArea" 
+                            rows="20" style="height:50vh"></textarea>
+                        </div>
+                        <p class="text-center text-success display-4" style="font-size: 1.4rem" v-if="reduceRate > 0">I saved you {{reduceRate}}% of file size</p>
+                    </div>
+            </div>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
